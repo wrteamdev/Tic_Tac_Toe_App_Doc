@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+        <link href="images/favicon.jpg" rel="icon" />
+        <title>Documentation | Tac Tac Toe</title>
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"/>
+        <!-- Custom Stylesheet -->
+        <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css" />
+    </head>
+
+    <body data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
+
+        <!-- Preloader -->
+        <div class="preloader">
+            <div class="lds-ellipsis">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <!-- Preloader End --> 
+
+        <!-- Document Wrapper   
+        =============================== -->
+        <div id="main-wrapper"> 
+
+            <!-- Header
+            ============================ -->
+            <header id="header" class="sticky-top"> 
+                <!-- Navbar -->
+                <nav class="primary-menu navbar navbar-expand-lg bg-dark navbar-dropdown-dark">
+                    <div class="container-fluid">
+                        <!-- Sidebar Toggler -->
+                        <button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><span class="w-75"></span><span></span></button>
+                        <!-- Logo --> 
+                        <img src="images/app/ic_launcher.png" width="50" height="50" alt="logo"/>
+                        <!-- Logo End -->
+                    </div>
+                </nav>
+                <!-- Navbar End --> 
+            </header>
+            <!-- Header End --> 
+
+            <!-- Content
+            ============================ -->
+            <div id="content" role="main">
+
+                <!-- Sidebar Navigation
+                ============================ -->
+                <div class="idocs-navigation bg-dark docs-navigation-dark">
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a href="#introduction" class="nav-link active">Introduction</a></li>
+                     
+                        <li class="nav-item"><a href="#TTT_app" class="nav-link">Tic Tac Toe</a>
+                            <ul class="nav flex-column">
+                                <li class="nav-item"><a class="nav-link" href="#howToSetupFlutter">How to setup flutter</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#upgradeFlutter">Upgrade flutter to 2.0</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#howToRunFlutterProject">How to run flutter project</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#howToRunFlutterInVSCode">How to run flutter in Vs code</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#howToChangePackageName">How to change package name</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#howToIntegrateFirebase">How to integrate firebase</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#howToEnableFirebaseAuth">How to enable firebase auth</a></li>
+                            
+                                <li class="nav-item"><a class="nav-link" href="#howToChangeAppName">How to change application name</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#howToChangeAppVersion">How to change application version</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#howToChangeAppLogo">How to change application logo</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#howToChangeGuestProfileIcon">How to change Guest Profile Icon</a></li>
+                                
+                                <li class="nav-item"><a class="nav-link" href="#howToChangeAdIds">How to change ad type and their ad ids</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#howToChangeMusic">How to change Music</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#howTochangeScoreCalculationValues">How to change leaderboard score calculation values</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#howTochangeCoinPurchaseValues">How to change coin purchase value & Add more coins to Purchase</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#howTochangeSkins">How to change Skins Icon and Price, or Add more skins</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#howToChangeLanguage">How to Add/Remove language</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#howToChangeAppColors">How to change application colors</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#howToChangeAppFont">How to change application font</a></li>
+                                
+                                <li class="nav-item"><a class="nav-link" href="#howToAppConstants">How to change application constants</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#howToRegisterForInAppPurchase">How to Register for In-App Purchase</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#howToGenerateReleaseApk">How to generate release apks</a></li>         
+                                <li class="nav-item"><a class="nav-link" href="#iosRelease">Steps to Publish iOS App to App Store</a></li>         
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="#support" class="nav-link">Support</a></li>
+                        <li class="nav-item"><a href="#rating" class="nav-link">Your Feedback</a></li>
+                        <li class="nav-item"><a href="#contactus" class="nav-link">Contact Us</a></li>         
+                        <li class="nav-item"><a href="#rating" class="nav-link">Rating</a></li>                                   
+                    </ul>
+                </div>
+
+
+                <!-- Docs Content  -->
+                <div class="idocs-content">
+                    <div class="container"> 
+
+                        <!-- Getting Started -->
+                        <section id="introduction">
+                            <h3>Introduction</h3>
+                            <p class="">Thank you for purchasing code. It really means a lot and It's our pleasure to serve top-notch service to you. Thank you so much for choosing<a href="https://wrteam.in/" style='color:#3c55d1' target="_blank"> WRTeam </a>. If you have trouble with the code and documentation please contact to our Support Team <a href="#support" style="color:#3c55d1">Here</a></p>
+                        </section>
+                         
+
+                        <hr class="divider">  
+
+                        <section id="TTT_app">
+                            <h3>Tic Tac Toe</h3>
+
+                            <section id="howToSetupFlutter">
+                                <h4 >How to setup Flutter</h4>
+                                <ol>
+                                    <li>Download Lastest Flutter SDK from below link.in that click on flutter_window_xxx.zip button.</li>
+                                    <li><a href="https://flutter.dev/docs/get-started/install/windows">Flutter sdk Here</a>
+                                        <img src="images/app/setup.png"/>	
+                                    </li> 
+                                    <li>Extract the zip file and copy flutter folder into your desired installation location for the
+                                        Flutter SDK (eg. C:\src\flutter; do not install Flutter in a directory like C:\Program Files\).
+                                    </li>                                  
+                                    <li>Inside Flutter folder find flutter_console.bat. Start it by double-clicking.
+                                        <img src="images/app/setup2.jpg" alt="Tac Tac Toe" />
+                                    </li>
+                                    <li>Now set your enviournment variable</li>
+                                    <li>From the Start search bar in , type ‘env’ and select Edit environment variables for your account
+                                        <img src="images/app/path.jpg" alt="Tac Tac Toe" />
+                                    </li>
+                                    <li>Under User variables check if there is an entry called Path:</li>
+                                    <li>Click on Edit.new Dialog open from it click on new and copy full path to flutter\bin as its value
+                                        <img src="images/app/path2.jpg" alt="Tac Tac Toe" />
+                                    </li>
+                                    <li>Now Restart your pc for changes to take effect
+                                        
+                                    </li>
+                                    <li>Now check everything is ok or not</li>
+                                    <li>open cmd and do following shown in below picture
+                                        <img src="images/app/check.jpg" alt="Tac Tac Toe" />
+                                    </li>
+                                    <li>Now open Android Studio and create new flutter project then select your flutter sdk file to the
+                                        location where we have downloaded earlier and that's it
+                                        <img src="images/app/flutter.png" alt="Tac Tac Toe" />
+                                    </li>
+                                </ol>
+                                <hr> 
+                            </section>
+
+                            <section id="upgradeFlutter">
+                                <h4>Upgrade to flutter 2.0</h4>
+                                <ol>
+                                    <li>for upgrade go to terminal in android studio and type flutter upgrade it will automatically pick latest version with stable channel</li>
+                                    <li>If you have updated flutter 2.x after upgrade run flutter doctor. and in flutter doctor if you see below error like licence status unknown.
+                                        <img src="images/app/upgrade1.jpg" alt="Tac Tac Toe" />
+                                    </li>
+                                    <li>then go to sdk manager from upar right corner then go to android sdk inside that sdk tools and then uncheck hide obsolute package then check android sdk command line tool latest then apply and then ok. it will download latest version  as shown in below fig.
+                                        <img src="images/app/upgrade2.jpg" alt="Tac Tac Toe" />
+                                    </li>
+                                    <li>now run flutter doctor again your error will be removed</li>
+                                </ol>					
+                                <hr> 
+                            </section>
+
+                            <section id="howToRunFlutterProject">
+                                <h4>How to run flutter project</h4>
+                                <img src="images/app/open2.jpg" alt="Tac Tac Toe" />
+                                <ol>
+                                    <li>Go to file > open > then choose your downloaded project location then your project will open.and if you see upper right part 'enable dart support' then click that and go to pubspec.yaml file and in uper right part click pub get or package get and then press run button.</li>
+                                    <li><b>If your are getting error then you can perform below hack</b>
+                                    <li>if in your system firewall is on, then you can temporary disable firewall and then try to run project</li>
+                                    <li>if your flutter channel is not stable then you need to change it to stable. you can check your flutter channel by terminal. </li>
+                                    <li>go to android studio in bottom line click on terminal, in terminal write flutter channel.as shown below.
+                                        <img src="images/app/ch1.jpg" alt="Tac Tac Toe" />
+                                    </li>
+                                    <li>if your are not in stable then write flutter channel stable</li>
+                                    <li>go to Tools > Flutter > Flutter Clen.</li>
+                                    <li>go to file > invalidate cache/ restart</li>
+                                </ol>					
+                                <hr> 
+                            </section>
+
+
+                            <section  id="howToRunFlutterInVSCode">
+                                <h4>How to run flutter in Vs code</h4>
+                                <ol>
+                                    <li>Visual Studio Code is a lightweight but powerful source code editor(optinal)(for vscode, all above setup for Android Studio are required).</li>
+                                    <li>For Download VSCode <a href="https://code.visualstudio.com/Download" style='color:#2889B9' target="_blank">Click Here</a></li>
+                                    <li>Open vs code and go to terminal option and open terminal
+                                        <img src="images/app/vscode1.jpg" alt="Tac Tac Toe" />
+                                    </li>
+                                    <li>Inside Terminal For Run the Application perform this two command 1. flutter pub get (flutter packages get) 2. flutter run </li>
+                                </ol>
+                                <hr> 
+                            </section>
+
+
+                            <section id="howToChangePackageName">
+                                <h4>How to change package name</h4>
+                                <ol>
+                                    <li>In the Android panel, click on the little gear icon.Uncheck/Deselect the Compact Empty Middle Packages option.
+                                        <img src="images/app/packagename_1.jpg" alt="Tac Tac Toe" />
+                                    </li>
+                                    <li>Your package directory will now be broken up in individual directories.
+                                        <img src="images/app/packagename_2.png" alt="Tac Tac Toe" />
+                                    </li>
+                                    <li>Individually select each directory you want to rename, and: Right-click it Select Refactor Click on Rename current In the Pop-up dialog.
+                                        <img src="images/app/packagename_3.jpg" alt="Tac Tac Toe" />
+                                    </li>
+                                    <li>Enter the new name and hit Refactor.Allow a minute to let Android Studio update all changes.
+                                        <img src="images/app/packagename_4.jpg" alt="Tac Tac Toe" />
+                                    </li>
+                                    <li>Now press ctrl + shift + R and replace old packagename with your new packagename
+                                        <img src="images/app/packagename_5.jpg" alt="Tac Tac Toe" />
+                                    </li>
+                                    <li>For ios open ios > Runner > info.plist > there is the key CFBundleIdentifier change the string value for that as shown in below
+                                        <img src="images/app/packagename_6.jpg" alt="Tac Tac Toe" /><br/>
+                                        <img src="images/app/changePackageName.png" alt="Tac Tac Toe" />
+                                    </li>                                   
+                                    <li>similar if you are using VSCode, for search press ctrl + F search old package name as given files in below image and replace with your package name. 
+                                        <img src="images/app/package_name1.jpg" alt="Tac Tac Toe" />
+                                    </li>
+                                </ol>
+                                <hr> 
+                            </section>
+
+
+                            <section  id="howToIntegrateFirebase">
+                                <h4>How to integrate firebase</h4>
+                                <ol>
+                                    <li>Create firebase project in your account
+                                        <img src="images/app/createFirebase1.png" alt="Tac Tac Toe" /><br>
+                                        <img src="images/app/createFirebase2.jpg" alt="Tac Tac Toe" /><br>
+                                        <img src="images/app/createFirebase3.jpg" alt="Tac Tac Toe" /><br>
+                                        <img src="images/app/createFirebase4.jpg" alt="Tac Tac Toe" /><br>
+                                    </li>
+                                    <li>Add andorid application to your firebase project
+                                        <img src="images/app/addAndroid.jpg" alt="Tac Tac Toe" />
+                                    </li>
+                                    <li>Visit https://developers.google.com/android/guides/client-auth to know how to get sha-1 key
+                                        <img src="images/app/addAndroid2.jpg" alt="Tac Tac Toe" /><br>
+                                        <img src="images/app/addAndroid3.jpg" alt="Tac Tac Toe" /><br>
+                                        <img src="images/app/addAndroid4.jpg" alt="Tac Tac Toe" /><br>
+                                    </li>
+                                    <li>You have connected andorid application to your firebase project successfully</li>
+                                    <li>Add ios application to your firebase project 
+                                        <img src="images/app/addIos.jpg" alt="Tac Tac Toe" />
+                                    </li>
+                                    <li>Get your bundle id here [your-flutter-project-dir]\ios\Runner.xcodeproj\project.pbxproj or search for
+                                        PRODUCT_BUNDLE_IDENTIFIER and you will get following result 
+                                        <img src="images/app/addIos3.jpg" alt="Tac Tac Toe" /><br>
+                                        <img src="images/app/addIos2.jpg" alt="Tac Tac Toe" /><br>
+                                        <img src="images/app/addIos4.jpg" alt="Tac Tac Toe" /><br>
+                                        <img src="images/app/addIos5.jpg" alt="Tac Tac Toe" /><br>
+                                        <img src="images/app/addIos6.jpg" alt="Tac Tac Toe" />
+                                    </li>
+                                    <li>You have connected ios application to your firebase project successfully</li>
+                                </ol>
+                                <hr> 
+                            </section>
+
+
+                            <section  id="howToEnableFirebaseAuth">
+                                <h4>How to enable firebase auth</h4>
+                                <ol>
+                                    <li>Go to firebase project.Click on authentication menu and goto sign-in method. Enable all the authentication as per selected in below image.
+                                    
+                                    </li>
+                                    <img src="images/app/firebaseAuth.png" alt="Tac Tac Toe" />
+                                    <li>If your are using google sign-in you need to enable OAuth APIs that you want to use using
+                                        https://console.developers.google.com/ .Enable people api and make sure you've filled out all required fields in the console for OAuth consent screen.
+                                        Otherwise, you may encounter APIException errors.
+                                    </li>
+                                </ol>
+                                <hr> 
+                            </section>
+
+
+                            <section  id="howToChangeAppName">
+                                <h4>How to change application name</h4>
+                                <ol>
+                                    <img src="images/app/TTTAppName.png" alt="Tac Tac Toe" />
+                                    <li>Change application name for your android application. Go to android/app/src/main/AndroidManifest.xml and change name
+                                        <img src="images/app/changeAppNAmeAndroid.png" alt="Tac Tac Toe" />
+                                    </li> 
+                                    <li>Change application name for your ios application. Go to ios/Runner/Info.plist and change name
+                                        <img src="images/app/changeAppNameIOS.png" alt="Tac Tac Toe" />
+                                    </li>                                    
+                                </ol>
+                                <hr> 
+                            </section>
+
+
+                            <section id="howToChangeAppVersion">
+                                <h4>How to change application version</h4>
+                                <ol>
+                                    <li>
+                                        go to pubspec.yaml EX.Update version:A.B.C+X in pubspec.yaml.
+                                    </li>   
+                                    <li>Do not forget to execute flutter packages get, flutter build or flutter run after this step</li>   
+                                </ol>
+                                <img src="images/app/changeAppVersion.png" alt="Tac Tac Toe" />
+                                <hr> 
+                            </section>
+
+                            <section id="howToChangeAppLogo">
+                                <h4>How to change application logo</h4>
+                                <ol>
+                                    <li>For Android, open android > app > src > main > res > mipmap add here your logo according to device screen size                
+                                        <img src="images/app/changeAppIconinAndroid.png" alt="Tac Tac Toe" />  
+                                    </li> 
+                                    <li>For IOS  open ios > Runner > Assets.xcassets > AppIcon.appiconset here you need to put your logo according to diffrent size.
+                                        <img src="images/app/changeAppIconInIOS.png" alt="Tac Tac Toe" />
+                                    </li> 
+                                </ol>
+                                <hr> 
+                            </section>
+
+
+                            <section id="howToChangeGuestProfileIcon">
+                                <h4>How to change Guest Profile Icon</h4>
+                                <ol>
+                                    <li>Go to Helper/Constants.dart then change the value as shown in image.
+                                        <img src="images/app/changeguestImage.png" alt="Tac Tac Toe" />  
+                                    </li> 
+                                    
+                                </ol>
+                                <hr> 
+                            </section>
+
+
+                            <section id="howToChangeAdIds">
+                                <h4>How to change ad type and their ids</h4>
+                                <ol>
+                                    <li>
+                                        Select your ad type first.<br>
+                                        <img src="images/app/changeAdType.png" alt="Tac Tac Toe" />
+                                    </li> 
+                                    <li>
+                                        If you are using Google ads then follow below steps else you can skip below steps.
+
+                                        <ol type="I">
+                                            
+                                            <li>
+                                                Go to lib/Helper/Constants.dart and update ad ids here as shown in below image
+                                                <img src="images/app/changeAdID.png" alt="Tac Tac Toe" />
+                                            </li> 
+                                            <li>
+                                                For Android, Go to android/app/src/main/AndroidManifest.xml and update ad ids as shown in below image
+                                                <img src="images/app/androidADID.png" alt="Tac Tac Toe" />
+                                            </li> 
+                                            <li>
+                                                For IOS, Go to ios/Runner/Info.plist and update ad ids as shown in below image
+                                                <img src="images/app/iosADID.png" alt="Tac Tac Toe" />
+                                            </li> 
+                                            For more info... <a href="https://pub.dev/packages/google_mobile_ads#platform-specific-setup">click here..</a>
+                                            <li>
+                                                To change Daily Reward AD limits and Reward Price, Go to lib/Helper/Constants.dart and update values as shown in below image. Do not change Variable names.
+                                                <img src="images/app/changeAdLimitandReward.png" alt="Tac Tac Toe" />
+                                            </li> 
+                                        </ol>
+                                    </li>
+                                </ol>
+                                                                
+                                <hr> 
+                            </section>
+
+
+                            <section id="howToChangeMusic">
+                                <h4>How to change Music</h4>
+                                <ol>    
+                                    <li>
+                                        First you need to add your music under the assets/music folder,
+                                        <img src="images/app/addMusicFilestoAssets.png" alt="Tac Tac Toe" />
+                                    </li> 
+                                    <li>
+                                        Now, go to lib/Helper/Constants.dart and assign the name of the music.
+                                        <img src="images/app/changeMusicinConstatnt.png" alt="Tac Tac Toe" />
+                                    </li> 
+         
+                                </ol>
+                                <hr> 
+                            </section>
+
+
+                            <section id="howTochangeScoreCalculationValues">
+                                <h4>How to change leaderboard score calculation Values</h4>
+                                <ol>
+                                    <li>
+                                        If you want to change the Calculation values of Leaderboard Scores, <br>
+                                        Go to lib/Helper/String.dart and edit the values as shown in below image
+                                        (Do not change the variable names).
+                                        
+                                        <ul>
+                                            <li>
+                                                winScore value is added to the total score of the users when the user wins the round.
+                                            </li>
+                                            <li>
+                                                loseScore value deducted from users total score when the user loses the round.
+                                            </li>
+                                            <li>
+                                                When the game is tied, a tieScore value is added to the total score of both players.
+                                            </li>
+                                        </ul>
+                                        <img src="images/app/changeLeaderboardScore.png" alt="Tac Tac Toe" />
+                            
+                                    </li> 
+                                    
+                                </ol>
+                                <hr> 
+                            </section>
+
+
+                            <section id="howTochangeCoinPurchaseValues">
+                                <h4>How to change coin purchase value & Add more coins to Purchase</h4>
+                                <ol>
+                                    <li>
+                                        If you want to change the coin purchase price values and coin values then
+                                        Go to lib/Helper/String.dart and Add the values as shown in below image
+                                        (Do not change the variable names).
+                                        
+
+                                        <img src="images/app/shop.png" alt="Tac Tac Toe" />
+                                    </li> 
+                                    
+                                    <li>
+                                        If you want to Add more coins to purchase then
+                                        Go to lib/screens/Shop.dart and edit the values as shown in below image
+                              
+                                        
+
+                                        <img src="images/app/addPurchaseCoin.png" alt="Tac Tac Toe" />
+                                    </li> 
+                        
+                                </ol>
+                                <hr> 
+                            </section>
+
+
+                            <section id="howTochangeSkins">
+                                <h4>How to change Skins Icon and Price, or Add more skins  </h4>
+                                <ol>
+                                    <li>
+                                        If you want to change the Skin Icons, Price and want to add more skins then
+                                        Go to lib/Helper/String.dart and edit the values as shown in below image
+                                        (Do not change the variable names).
+                            
+                                        <img src="images/app/skin.png" alt="Tac Tac Toe" />
+                                    </li> 
+                                    <li>
+                                        If you want to add more skin then create a perfect block of code as shown in below image.<br>
+                                        And also if in any case you want to remove any Skin then you can remove the particular skin block as per shown in image
+                            
+                                        <img src="images/app/addSkin.png" alt="Tac Tac Toe" />
+                                    </li> 
+                                </ol>
+                                <hr> 
+                            </section>
+
+
+                            <section id="howToChangeLanguage">
+                                <div class="container"> <br>
+                                    <h2>How to Add/Remove language</h2>
+                                    <ol>
+                                        <li>To Add New Languge</li>
+                                        <ul>
+                                            <li>If you want to Add new language then copy one json file from language folder
+                                                and add it to languge folder then rename it to language code of your new
+                                                language
+                                            </li>
+    
+    
+                                            <li>now open that json file and change value of string to your language string.
+                                                remember here you need to add all string in file if any one string is
+                                                missing in any file then when you change that language then it will give you
+                                                error. so add all string in all json file.</li>
+    
+                                            <br>
+    
+                                            <img src="images/app/lan2.png" alt="Tac Tac Toe" />
+                                            <br><br>
+    
+                                            <li>now search in whole project "en", by pressing <b>ctrl shift f</b>. now where you
+                                                see languge code in list add your new lanaguge code there.</li>
+                                            <br> <img src="images/app/lang1.png" alt="Tac Tac Toe" />
+                                            <br><br>
+    
+                                            <li>now go to profile.dart file inside that go to _getLanguageList() method inside that
+                                                in languageList add your new languge string name here as shown in below
+                                                image.now add this new language string to all json file here you have to use
+                                                same string name as you have specified in language list in left side.in
+                                                right side give language name </li>
+                                            <br>
+                                            <img src="images/app/lang2.png" alt="Tac Tac Toe" />
+                                            <br><br>
+    
+                                            <li>
+                                                If your app contains languages which need RTL layout then add language code at specified location (lib/Helper/string.dart) in image
+                                                <br>
+                                                (E.g:- List<String> rtlLanguages = ['ar','ur'];)<br>
+                                                <img src="images/app/addRTL.png" alt="Tac Tac Toe" />
+                                            </li>
+                                        </ul>
+    
+                                        <li> To remove language</li>
+                                        <ul>
+                                            <li>now search in whole project "en", by pressing ctrl shift f. now where you
+                                                see languge code in list remove lanaguge code that you don't want.</li>
+                                            <br> <img src="images/app/lang1.png" alt="Tac Tac Toe" />
+                                            <br><br>
+                                        </ul>
+                                    </ol>
+                                    <div class="section_bdr"></div>
+                                    </ul>
+                                </div>
+                            </section>
+
+                            <!-- <section  id="howToChangeLanguage">
+                                <h4>How to Change language</h4>
+                                <ol>    
+                                    <li>
+                                        If you want to change the language of the Application then
+                                        Go to lib/Helper/String.dart and change the values to your language. 
+                                        (Do not change the variable names).
+                                        <img src="images/app/changeLanguage.png" alt="Tac Tac Toe" />
+                                        <img src="images/app/changeLanguage1.png" alt="Tac Tac Toe" />
+                                    </li> 
+                                                                  
+                                </ol>
+                                <hr> 
+                            </section> -->
+
+                    
+
+                            <section id="howToChangeAppColors">
+                                <h4>How to change application colors</h4>
+                                <ol>    
+                                    <li>
+                                        Add your colors in lib/Helper/Colors.dart and do not change the color variables name
+                                        <img src="images/app/changeAppColors.png" alt="Tac Tac Toe" />
+                                    </li>   
+                                </ol>
+                                <hr> 
+                            </section>
+
+
+                            <section id="howToChangeAppFont">
+                                <h4>How to change application font</h4>
+                                <ol>    
+                                    <li>
+                                        Go to assets/fonts and add your font as shown in image<br>
+                                        then open pubspec.yaml file and add your font details as shown in below image
+                                        <img src="images/app/changeFont.png" alt="Tac Tac Toe" />
+                                    </li>
+                                    <li>
+                                        Now as per shown in below image, change fontfamily name in main.dart file
+                                        <img src="images/app/changeFont2.png" alt="Tac Tac Toe" />
+                                    </li>
+                                     
+                                </ol>
+                                <hr> 
+                            </section>
+
+
+                            <section id="howToAppConstants">
+                                <h4>How to change application constants</h4>
+                                <ol>    
+                                    <li>
+                                        If you want to change the duration of the player timer, the number of rounds, and the value of the rounds, edit as shown in the image
+                                        Go to lib/Helper/Constants.dart and update values
+                                        <img src="images/app/changeTimerandrounds.png" alt="Tac Tac Toe" />
+                                        
+                                    </li> 
+                                    <li>If you want to change the defaultSkin values or other constants values such as Privacy Policy, Term and Conditions etc., edit as shown in the image.
+                                        Go to lib/Helper/Constants.dart and update values
+                                        <img src="images/app/changeOtherConstants.png" alt="Tac Tac Toe" />
+                                    </li>
+                                </ol>
+                                <hr> 
+                            </section>
+
+
+                            <section id="howToRegisterForInAppPurchase">
+                                <h4>How to Register for In-App Purchase</h4>
+                                <h6>To create an in-app product:</h6>
+                        
+                                <ol>    
+                                    <li>
+                                        Open Play Console and go to the In-app products page (Monetize > Products > In-app products).
+                                    </li> 
+                                    <li>
+                                        Click Create product.
+                                    </li>
+                                    <li>
+                                        Enter your product details. 
+                                        <ul>
+                                            <li>
+                                                <b>Product ID:</b> A unique ID for your in-app product.
+                                            </li>
+                                            <li>
+                                                <b>Title:</b> A short name of the item (up to 55 characters, but we recommend limiting titles to 25 characters to display properly in all contexts), like "Sleeping potion."
+                                            </li>
+                                            <li>
+                                                <b>Description:</b> A long description of the item (up to 200 characters), like “Instantly puts creatures to sleep."
+                                            </li>
+                                            <li>
+                                                <b>Icon:</b> A unique and accurate image for your product. Don't include text, promotions, or branding. Your product icon is shown on your store listing and during the purchase flow. 
+                                                <ul>
+                                                    <li>32-bit PNG</li>
+                                                    <li>512 px by 512 px</li>
+                                                    <li>Up to 1 MB</li>
+                                                </ul>
+                                            
+                                            </li>
+                                            <li> <b>Price:</b> Enter a price in your local currency or select a pricing template.</li>
+                                            <li><b>Play Points exclusive:</b> Make your product available only in Google Play Points.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Save your changes and click Activate to make your in-app product available to users.. 
+                                        <ul>
+                                        <li>To be available for purchase, a product needs to be active, and its app needs to be published.</li>
+                                        <li>If you’re using a test account, active items are available in unpublished apps. To learn more, go to the Android Developers site.</li>
+                                        </ul>
+                                    </li>
+                        
+                                </ol>
+                                For More info.. <a href="https://support.google.com/googleplay/android-developer/answer/1153481?hl=en#zippy=%2Ccreate-a-single-in-app-product">click here</a>
+                                (IOS) <a href="https://developer.apple.com/in-app-purchase/">click here</a>
+                                <hr> 
+                            </section>
+
+
+                            <section  id="howToGenerateReleaseApk">
+                                <h4>How to generate release apks</h4>
+                            
+                               
+                        
+                                    <b>By using Commands</b>
+                                    <ol>
+                                        
+                                        <li>
+                                            Create an upload keystore<br>
+                                            Running the following at the command line:<br>
+                                            <ul>
+                                               <li>
+                                                On Mac/Linux, use the following command: <br><br>
+                                                keytool -genkey -v -keystore ~/upload-keystore.jks -keyalg RSA -keysize 2048 -validity 10000 -alias upload
+                                                <br><br>
+                                               </li>
+                                               <li>
+                                                On Windows, use the following command:<br><br>
+                                                keytool -genkey -v -keystore c:\Users\USER_NAME\upload-keystore.jks -storetype JKS -keyalg RSA -keysize 2048 -validity 10000 -alias upload
+                                                <br><br>
+                                            </li> 
+                                            
+                                            </ul>
+                                            <img src="images/app/modifyPath.png" alt="Tic Tac Toe" /><br><br>
+                                            <img src="images/app/remeberPassword.png" alt="Tic Tac Toe" /><br><br>
+                                            <img src="images/app/success.png" alt="Tic Tac Toe" /><br><br>
+
+                                        </li>
+
+                                        <li>
+                                            Reference the keystore from the app<br><br>
+                                            Create a file named [project]/android/key.properties that contains a reference to your keystore:<br>
+                                            <br>
+
+                                                
+                                                
+                                            <img src="images/app/createfile.png" alt="Tic Tac Toe" /><br><br>
+                                            
+                                            Copy below code, Paste in to key.propertirs file and change as per shown in image.<br><br>
+                                            
+                                                storePassword=<password from previous step> <br>
+                                                keyPassword=<password from previous step> <br>
+                                                keyAlias=upload <br>
+                                                storeFile=location of the key store file, such as /Users/user name/upload-keystore.jks<br><br>
+                                            <img src="images/app/setPath.png" alt="Tic Tac Toe" /><br><br>
+
+                                            
+                                        </li>
+
+                                        <li>
+                                            Configure signing in gradle <br><br>
+                                            Configure gradle to use your upload key when building your app in release mode by editing the [project]/android/app/build.gradle file.<br>
+                                            
+                                            <ul>
+                                                <li>
+                                                    Add the below keystore information from your properties file before the android block: <br><br>
+                                                    <br>
+                                                    def keystoreProperties = new Properties()<br>
+                                                    def keystorePropertiesFile = rootProject.file('key.properties')<br>
+                                                    if (keystorePropertiesFile.exists()) {<br>
+                                                        keystoreProperties.load(new FileInputStream(keystorePropertiesFile))<br>
+                                                    }<br><br>
+             
+
+<img src="images/app/codeBlock1.png" alt="Tic Tac Toe" /><br><br>
+                                                </li>
+                                                <li>
+                                                    Find the buildTypes block:<br>
+                                                    And replace it with the following signing configuration info:
+                                                 <br><br>
+                                                   signingConfigs { <br>
+                                                            release {<br>
+                                                                keyAlias keystoreProperties['keyAlias']<br>
+                                                                keyPassword keystoreProperties['keyPassword']<br>
+                                                                storeFile keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : null<br>
+                                                                storePassword keystoreProperties['storePassword']<br>
+                                                            }<br>
+                                                            }<br>
+                                                            buildTypes {<br>
+                                                            release {<br>
+                                                                signingConfig signingConfigs.release<br>
+                                                            }<br>
+                                                            }<br> <br>
+
+                                                            <img src="images/app/codeBlock2.png" alt="Tic Tac Toe" /><br><br>
+                                                    
+                                            </li></ul>
+                                            <br>  
+                                        </li>
+                                        <li>
+                                            Run following commands in Terminal as per your need: <br>
+                                            <ul>
+                                                <li>
+
+                                                    To generate an APK <br>
+                                                    flutter build apk 
+                                                </li>
+                                                <li>
+
+                                                    To generate an App Bundle <br>
+                                                    flutter build appbundle 
+                                                </li>
+                                                <br>
+                                                <img src="images/app/generateAPK.png" alt="Tic Tac Toe" /><br><br>
+                                            </ul>
+                                        </li>
+    
+                                    </ol>
+                                </ol>
+								
+                                <hr> 
+                            </section>
+
+                            <section  id="iosRelease">
+                                <h4>Steps to Publish iOS App to App Store</h4>
+                                
+								<ol>
+									<li>Open your Project's Runner.xcworkspace file in Xcode, and Add your Team [Your
+										Apple Developer ID] and also Insert GoogleService-Info.plist file [Downloaded
+										From Firebase Project] inside folder named Runner.</li>
+
+									<br>
+									<img src="images/ios1.png" alt="Tic Tac Toe" /><br><br>
+
+									<li>and then Select <b>Any iOS Device (armv7,arm64)</b> as shown in image below.
+									</li>
+									<br>
+									<img src="images/ios2.png" alt="Tic Tac Toe" /><br><br>
+
+									<li>After that Select <b>Archive</b> From Product Menu of Xcode as shown below.
+									</li>
+
+									<br>
+									<img src="images/ios3.png" alt="Tic Tac Toe" /><br><br>
+
+									<li>Once Build / Archive Generated, pop up window will be shown. Validate app First,
+										and After Successfull Validation of App, You Can Distribute App to AppStore.
+									</li>
+
+									<img src="images/ios4.png" alt="Tic Tac Toe" /><br><br>
+
+
+									<li>After SuccessFull Submission of Build File, it will be Reflected to your Apple
+										Developer Account in which we have created app with same Bundle ID.</li>
+									<a href="https://codewithchris.com/submit-your-app-to-the-app-store/"
+										style="color:red">Click here for Detailed Help</a>
+
+								</ol>
+
+                                <hr> 
+                            </section>
+
+                        </section>
+                        <hr class="divider">  
+
+                        <section id="support">
+                            <h3>Support</h3>
+                            <p>Its our pleasure to serve our service and support. please contact our support team.</p>
+                            <p>Head of Customer Support : Jignesh Majethiya<br> 
+                                
+                                Skype: <a
+                                href="https://join.skype.com/invite/wpO6RYDhElUY" target="_blank"
+                                style='color:#3c55d1'> Jignesh Majethiya</a><br>
+
+                    
+                        </p>
+                            <p>To help our customers, we constantly be in touch with every customer if they need any assistance regarding our product. 
+                                We offer our customers a support from  <strong> Mon – Fri 9.00am to 6.00pm IST (GMT +5.30) – We are a Team located in India – Asia.</strong></p>
+                            <p>Typically we reply our customers for all the questions and queries within 24 hours of time via comments, support forum or emails.</p>
+                        </section>
+                        <hr class="divider">  
+
+                        <section id="rating">
+                            <h3>Your Feedback</h3>
+                            <p>Dear valuable customer,
+                                Thank you very much for choosing our product.
+                                It's our pleasure to serve top-notch service to you.
+                                Please give us your honest feedback that will help us to make a more strong and reliable product by click here <a href="https://codecanyon.net/item/elite-quiz-the-flutter-quiz-app/33570423" style="color:#3c55d1" target="_blank">Rate Us</a>.
+                                Thank you very much.</p>
+                        </section>
+                        <hr class="divider">  
+
+                        <section id="contactus">
+                            <h3>Contact Us</h3>
+                            <p>WRTeam has creative and dedicated group of developers who are mastered in Apps Developments and Web Application Development with a niche in delivering quality solutions to customers across the globe.
+                                Contact us today to find out how we can help you or for freelance work.
+                            </p><p>Visit Us : <a href="https://wrteam.in/" target="_blank">https://wrteam.in</a>
+                            </p><p>Mail Us : support@wrteam.in</p>
+                        </section>
+                        <hr class="divider">  
+
+                        <section id="rating">
+                            <h3>Rating </h3>
+                            <p>If you like our app, we will highly appreciate if you can provide us a rating of 5. You can rate us from your CodeCanyon Menu > <a href="https://codecanyon.net/downloads"> Download</a> page.
+                        
+                            <p>Thank you very much.</p>
+                        </section>
+                        
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- Content end --> 
+
+
+        </div>
+        <!-- Document Wrapper end --> 
+
+        <!-- Back To Top --> 
+        <a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i class="fa fa-chevron-up"></i></a> 
+
+        <!-- JavaScript
+        ============================ -->
+        <script src="assets/vendor/jquery/jquery.min.js"></script> 
+        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
+        <!-- Easing --> 
+        <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script> 
+        <!-- Custom Script -->
+        <script src="assets/js/theme.js"></script>
+    </body>
+</html>
